@@ -1,0 +1,12 @@
+<app-header></app-header>
+<h1 class="titulo-principal">Sunrise Sunsent</h1>
+<div class="contenedor-centrar">
+  <div class="contenedor-inputs">
+    <input type="number" [(ngModel)]="latitud" placeholder="Longitud" class="form-control input-principal" required>
+    <input type="number" [(ngModel)]="longitud" placeholder="Latitud" class="form-control input-principal" required>
+    <button class="boton-principal"  (click)="cargarDatos(latitud, longitud)">Calcular</button>
+  </div>
+  <app-cards-resultados [sunrise]="list.results.sunrise" [sunset]="list.results.sunset"></app-cards-resultados>
+
+</div>
+<app-footer></app-footer>
